@@ -62,5 +62,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 This project is licensed under the [MIT License](LICENSE).
 
 ---
-
-**Note:** Customize the README according to your project's specific details, add badges for build status, code coverage, or other metrics if applicable, and provide more information about the project structure and usage.
