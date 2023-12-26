@@ -1,28 +1,22 @@
-package com.ecommerce.base.dao.user;
+package com.ecommerce.base.dao.orderStatus;
 
-import com.ecommerce.base.entity.User;
+import com.ecommerce.base.entity.OrderStatus;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 @Repository
 @Transactional
-public class UserDaoImpl implements UserDao{
+public class OrderStatusDaoImpl implements OrderStatusDao{
 
     @Autowired
     private SessionFactory sessionFactory;
 
     @Override
-    public List<User> getUserList() {
-        System.out.println("UserDaoImpl.getUserList");
+    public void insertOrderStatus(OrderStatus orderStatus) {
         Session session = sessionFactory.getCurrentSession();
-        List<User> userList = session.createQuery(" FROM User").list();
-        return userList;
+        session.save(orderStatus);
     }
-
-
 }

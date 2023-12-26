@@ -1,8 +1,7 @@
 package com.ecommerce.base.controller.user;
 
-import com.ecommerce.base.entity.user.User;
+import com.ecommerce.base.entity.User;
 import com.ecommerce.base.service.user.UserService;
-import com.ecommerce.base.service.user.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +23,6 @@ public class UserController {
         List<User> userList = userService.getUserList();
         System.out.println(userList);
         model.addAttribute("userList", userList);
-        return "listUser";
+        return "/views/listUser.jsp";
     }
 }

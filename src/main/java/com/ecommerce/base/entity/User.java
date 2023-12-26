@@ -1,4 +1,4 @@
-package com.ecommerce.base.entity.user;
+package com.ecommerce.base.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
