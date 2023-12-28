@@ -19,7 +19,8 @@ public class OrderStatusController {
     private OrderStatusService orderStatusService;
 
     @PostMapping(value = "save")
-    public String saveOrderStatus(OrderStatus orderStatus, Model model) {
+    @ResponseBody
+    public String saveOrderStatus(@RequestBody OrderStatus orderStatus, Model model) {
         System.out.println("OrderStatus: " + orderStatus);
         orderStatusService.insertOrderStatus(orderStatus);
         return "listUser";
