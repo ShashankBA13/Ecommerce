@@ -7,4 +7,9 @@ import java.util.List;
 public interface UserService {
 
     public List<User> getUserList();
+    public boolean checkEmailExist(String emailid);
+    
+    public String createSignup(User user);
+    
+   
 }

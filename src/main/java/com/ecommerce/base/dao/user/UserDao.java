@@ -7,6 +7,11 @@ import java.util.List;
 public interface UserDao {
 
     public List<User> getUserList();
+    public boolean  checkEmailExist(String emailid);
+    
+    public int save(User user);
+    
+    
 
 
 }
