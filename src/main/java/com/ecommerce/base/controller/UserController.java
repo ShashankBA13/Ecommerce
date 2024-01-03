@@ -33,13 +33,27 @@ public class UserController {
 		System.out.println(user);
 		String res = userService.createSignup(user);
 		if (res != null && res.equals("1")) {
-			return "signupsuccess";
+			return "login";
 		} else if (res != null && res.equals("0")) {
 			return "signupfailure";
 		} else {
 			model.addAttribute("email exist msg", res);
 			return "signupfailure";
 		}
+	}
+
+	@PostMapping(value = "/login")
+	public String login(User user, Model model) {
+		System.out.println("user = " + user);
+		String result = userService.login(user);
+
+		if(result.equals("Login Success")) {
+			return "home";
+		} else {
+			model.addAttribute("failureMessage", "Something happened at our end");
+			return "login";
+		}
+
 	}
 
 }
