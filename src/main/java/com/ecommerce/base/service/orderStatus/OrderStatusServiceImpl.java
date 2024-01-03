@@ -6,14 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OrderStatusServiceImpl implements OrderStatusService{
+public class OrderStatusServiceImpl implements OrderStatusService {
 
-    @Autowired
-    private OrderStatusDao orderStatusDao;
+	@Autowired
+	private OrderStatusDao orderStatusDao;
 
-
-    @Override
-    public void insertOrderStatus(OrderStatus orderStatus) {
-        orderStatusDao.insertOrderStatus(orderStatus);
-    }
+	@Override
+	public void insertOrderStatus(OrderStatus orderStatus) {
+		orderStatusDao.insertOrderStatus(orderStatus);
+	}
 }

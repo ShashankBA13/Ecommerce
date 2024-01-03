@@ -9,14 +9,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional
-public class OrderStatusDaoImpl implements OrderStatusDao{
+public class OrderStatusDaoImpl implements OrderStatusDao {
 
-    @Autowired
-    private SessionFactory sessionFactory;
+	@Autowired
+	private SessionFactory sessionFactory;
 
-    @Override
-    public void insertOrderStatus(OrderStatus orderStatus) {
-        Session session = sessionFactory.getCurrentSession();
-        session.save(orderStatus);
-    }
+	@Override
+	public void insertOrderStatus(OrderStatus orderStatus) {
+		Session session = sessionFactory.getCurrentSession();
+		session.save(orderStatus);
+	}
 }

@@ -5,5 +5,5 @@ import com.ecommerce.base.entity.OrderStatus;
 
 public interface OrderStatusService {
 
-    public void insertOrderStatus(OrderStatus orderStatus);
+	public void insertOrderStatus(OrderStatus orderStatus);
 }
