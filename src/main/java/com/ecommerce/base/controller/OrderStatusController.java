@@ -1,4 +1,4 @@
-package com.ecommerce.base.controller.orderStatus;
+package com.ecommerce.base.controller;
 
 import com.ecommerce.base.entity.OrderStatus;
 import com.ecommerce.base.service.orderStatus.OrderStatusService;

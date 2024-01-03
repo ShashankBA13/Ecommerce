@@ -1,4 +1,4 @@
-package com.ecommerce.base.controller.user;
+package com.ecommerce.base.controller;
 
 import com.ecommerce.base.entity.User;
 import com.ecommerce.base.service.user.UserService;
