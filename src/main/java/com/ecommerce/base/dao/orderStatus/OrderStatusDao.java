@@ -5,5 +5,5 @@ import org.hibernate.criterion.Order;
 
 public interface OrderStatusDao {
 
-    public void insertOrderStatus(OrderStatus orderStatus);
+	public void insertOrderStatus(OrderStatus orderStatus);
 }

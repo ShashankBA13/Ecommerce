@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class TestController {
 
-    @RequestMapping(value = "test")
-    public String test() {
-        return "sayHello";
-    }
+	@RequestMapping(value = "test")
+	public String test() {
+		return "sayHello";
+	}
 
-    @PostMapping(value = "customMessage")
-    public String customMessage(Model model) {
-        System.out.println("TestController.customMessage");
-        model.addAttribute("customMessage", "Here is your custom message");
-        return "sayHello";
-    }
+	@PostMapping(value = "customMessage")
+	public String customMessage(Model model) {
+		System.out.println("TestController.customMessage");
+		model.addAttribute("customMessage", "Here is your custom message");
+		return "sayHello";
+	}
 }

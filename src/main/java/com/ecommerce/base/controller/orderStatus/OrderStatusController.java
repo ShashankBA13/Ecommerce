@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(value = "orderStatus")
 public class OrderStatusController {
 
-    @Autowired
-    private OrderStatusService orderStatusService;
+	@Autowired
+	private OrderStatusService orderStatusService;
 
-    @PostMapping(value = "save")
-    @ResponseBody
-    public String saveOrderStatus(@RequestBody OrderStatus orderStatus, Model model) {
-        System.out.println("OrderStatus: " + orderStatus);
-        orderStatusService.insertOrderStatus(orderStatus);
-        return "listUser";
-    }
+	@PostMapping(value = "save")
+	@ResponseBody
+	public String saveOrderStatus(@RequestBody OrderStatus orderStatus, Model model) {
+		System.out.println("OrderStatus: " + orderStatus);
+		orderStatusService.insertOrderStatus(orderStatus);
+		return "listUser";
+	}
 }
