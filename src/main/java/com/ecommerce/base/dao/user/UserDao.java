@@ -12,4 +12,6 @@ public interface UserDao {
 
 	public int save(User user);
 
+	public User login(User user);
+
 }

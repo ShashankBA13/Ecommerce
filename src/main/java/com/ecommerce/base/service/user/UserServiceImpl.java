@@ -47,4 +47,25 @@ public class UserServiceImpl implements UserService {
 	public boolean checkEmailExist(String emailid) {
 		return userDao.checkEmailExist(emailid);
 	}
+
+	@Override
+	public String login(User user) {
+		User userDb = userDao.login(user);
+
+		try {
+			String encodedPassword = userDb.getPassword();
+			String plainPassword = user.getPassword();
+
+			boolean result = passwordEncoder.matches(plainPassword, encodedPassword);
+
+			if(result == false) {
+				return "Incorrect Password";
+			} else {
+				return "Login Success";
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "login Failed";
+		}
+	}
 }

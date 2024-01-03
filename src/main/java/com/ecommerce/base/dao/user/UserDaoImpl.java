@@ -60,4 +60,17 @@ public class UserDaoImpl implements UserDao {
 
 	}
 
+	@Override
+	public User login(User user) {
+		Session session = sessionFactory.getCurrentSession();
+		String queryString = "FROM User WHERE emailId = :emailId";
+		Query query = session.createQuery(queryString).setParameter("emailId", user.getEmailId());
+		try {
+			User dbUser = (User) query.uniqueResult();
+			return dbUser;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return new User();
+		}
+	}
 }

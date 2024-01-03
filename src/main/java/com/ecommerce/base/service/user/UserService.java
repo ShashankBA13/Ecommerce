@@ -12,4 +12,6 @@ public interface UserService {
 
 	public String createSignup(User user);
 
+	public String login(User user);
+
 }
