@@ -42,18 +42,24 @@ public class UserController {
 		}
 	}
 
+	@GetMapping(value = "/login")
+	public String login() {
+		return "login";
+	}
+
 	@PostMapping(value = "/login")
 	public String login(User user, Model model) {
+
 		System.out.println("user = " + user);
 		String result = userService.login(user);
 
 		if(result.equals("Login Success")) {
-			return "home";
+			System.out.println("Inside the success block");
+			return "redirect:/home/";
 		} else {
 			model.addAttribute("failureMessage", "Something happened at our end");
 			return "login";
 		}
-
 	}
 
 }
